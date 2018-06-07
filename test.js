@@ -180,3 +180,7 @@ function print(obj) {
     print(
     getMigliorinvestimento()
     );
+
+    print(
+    json.getTotpaid_views2()
+    );

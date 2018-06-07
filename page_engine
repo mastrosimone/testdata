@@ -1,0 +1,89 @@
+
+{
+tagname: 'html',
+children: [
+
+            {
+        tagname: 'head',
+        children: [
+
+            {
+                tagname: 'meta',
+                attributes: [
+                    { name: 'charset', content: 'utf-8'}
+                ],
+                }
+
+
+                {
+                tagname: 'meta',
+                attributes: [
+                    { name: 'name', content: 'description'}
+                    { name: 'content', content: 'The Mosaicoon platform uses data to make video content marketing simple and cost-effective.'}
+                ],
+                }
+
+        ],
+
+                    {
+                tagname: 'body',
+                children: [
+
+                            {
+                            tagname: 'h1',
+                            content: "Site Title"
+                            },
+
+                                        {
+                                        tagname: 'p',
+                                        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque felis sit amet efficitur congue. Phasellus ut scelerisque sem. Ut ut aliquam nisl."
+                                        },
+
+                                                        {
+                                                tagname: 'ul',
+                                                children: [
+                                                                    {
+                                                            tagname: 'li',
+                                                            content: "option 1"
+                                                            }
+                                                                {
+                                                                tagname: 'li',
+                                                                content: "option 2"
+                                                                }
+
+                                                                            {
+                                                                            tagname: 'li',
+                                                                            attributes: [
+                                                                                { name: 'src', value 'img.jpg'}
+                                                                                { name: 'width', value '100'}
+                                                                                { name: 'height', value '100'}
+                                                                                { name: 'alt', value 'alternative text'}
+                                                                            ],
+                                                                            }
+                                                ],
+                                                }
+
+                ],
+                }
+
+        }
+
+],
+}
+
+
+
+
+
+
+
+
+
+            {
+                tagname: '',
+                children: [],
+                attributes: [
+                    { name: '', value ''}
+                ],
+                content: "contenuto h1"
+                }

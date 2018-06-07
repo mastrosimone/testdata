@@ -1,4 +1,18 @@
 var json = {
+
+    getTotpaid_views2: function()
+    
+    {
+    var result = 0
+    for(x = 0;x < this.data.length;x++)
+    {
+    result += this.data[x].paid_views.desktop +
+    this.data[x].paid_views.mobile
+    
+    }
+    return 'Paid Views: ' + result
+    },
+
     data: [
         {
             "interactions": {
