@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+		<title>Javascript Test</title>
+		<div></div>
+
+
+        
+		<script>
+			var myObject = {
+			Nome: 'Alessio',
+			Cognome: 'Mastrosimone',
+			Nascita: 1982,
+			Sesso: 'M',
+		};
+
+			function funzione()
+			{
+				var nome = Object.values(myObject)
+			for(x = 0;x < nome.length;x++){
+				console.log(nome[x])
+
+				var div = document.createElement("div");
+
+				div.innerHTML = nome[x]
+
+				document.body.appendChild(div);
+			}
+
+			}
+
+			
+			function funzione2()
+
+			// da completare
+			
+			{
+				var nome = myObject.Nome
+				var cognome = myObject.Cognome
+				var nascita = myObject.Nascita
+				var sesso = myObject.Sesso
+			for(x = 0;x < nome.length;x++){
+				console.log(nome[x])
+
+				var div = document.createElement("div");
+
+				div.innerHTML = nome[x]
+
+				document.body.appendChild(div);
+			}
+
+			}
+
+
+			
+			document.body.innerHTML = myObject;
+			
+
+        </script>
+        <script src="data2.js"></script>
+
+	</body>
+</html>
