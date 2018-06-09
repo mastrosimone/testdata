@@ -9,8 +9,13 @@
  * 
  * @return {undefined}
  */
-function printMenu(menu) {
+
+
+
+function printMenu(menu) { 
     var menuEl = document.getElementById('menuEL');
+
+    menuEL.innerHTML = "";
 
     var dataLength = menu.data.length;
 
@@ -50,7 +55,7 @@ function printMenu(menu) {
 function printPersonalInfos(personal) {
     var personalEl = document.getElementById('personalEl');
 
-        
+        personalEl.innerHTML = "";
 
         var div = document.createElement("div");
         div.classList.add("PersonalInfos-image");
@@ -113,6 +118,7 @@ function printPersonalInfos(personal) {
 function printWorkExperience(works) {
     var workEl = document.getElementById('workEl');
 
+    workEl.innerHTML = "";
 
     var h3 = document.createElement("h3")
     h3.textContent = works.section.title
