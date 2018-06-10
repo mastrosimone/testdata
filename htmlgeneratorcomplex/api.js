@@ -22,7 +22,7 @@ var api = {
                  firstname: 'Alessio',
                  surname: 'Mastrosimone',
                  position: 'Developer',
-                 img: 'https://www.placecage.com/500/500',
+                 img: 'image.jpg',
                  skills: [
                      'skill en 1',
                      'skill en 2',
@@ -78,7 +78,7 @@ var api = {
                  firstname: 'Alessio',
                  surname: 'Mastrosimone',
                  position: 'Sviluppatore',
-                 img: 'https://www.placecage.com/500/500',
+                 img: 'image.jpg',
                  skills: [
                      'skill it 1',
                      'skill it 2',
