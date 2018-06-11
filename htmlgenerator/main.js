@@ -221,8 +221,9 @@ var cognome = document.querySelector("#cognome");
 
 var dataLength = api.en.works.data.length;
 var select = document.getElementById('select');
+var i = 0;
 
-for (var i = 0; i < dataLength; i++) {
+for (i; i < dataLength; i++) {
     var option = document.createElement("option");
     option.setAttribute("value", i);
     option.textContent = api.en.works.data[i].title;
@@ -234,17 +235,26 @@ var mod_form = document.querySelector('#mod_work')
 var exp_lavorativa = document.querySelector("#exp_lavorativa");
 var exp_lavorativa_descr = document.querySelector("#exp_lavorativa_descr");
 
+//test
+
+
+
 
 //da completare
 mod_form.addEventListener("submit", function(e) {
     e.preventDefault();
-    if (select.value == 'new')
-    {
+    if (select.value == 'new'){
+        var element = {}, data = [];
+        element.title = exp_lavorativa.value;
+        element.description = exp_lavorativa_descr.value;
+        data.push(element);
+        api[lang.value].works.data.push(element);
+        printWorkExperience(api[lang.value].works);
 
     } else {
-    api.en.works.data[select.value].title = exp_lavorativa.value;
-    api.en.works.data[select.value].description = exp_lavorativa_descr.value;
-    printWorkExperience(api.en.works);
+    api[lang.value].works.data[select.value].title = exp_lavorativa.value;
+    api[lang.value].works.data[select.value].description = exp_lavorativa_descr.value;
+    printWorkExperience(api[lang.value].works);
 }
 
 });
