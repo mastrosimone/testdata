@@ -192,4 +192,72 @@ document.addEventListener("DOMContentLoaded", function (event) {
         var value = e.target.value;
         render(value);
     })
+// inizio modifiche
+    // var el = document.querySelector("button");
+
+// el.addEventListener("click", function(e) {
+//     console.log(e.targer);
+//     console.log(e.type);
+    
+//     e.preventDefault();
+// });
+
+var form = document.querySelector("form");
+
+form.addEventListener("keyup", function(e) {
+    e.preventDefault();
+    api[lang.value].personal.data.surname = cognome.value;
+    api[lang.value].personal.data.firstname = nome.value;
+    api[lang.value].personal.data.position = position.value;
+    printPersonalInfos(api[lang.value].personal);
+});
+
+var nome = document.querySelector("#nome");
+var cognome = document.querySelector("#cognome");
+
+// inizio workexprerience
+
+
+
+var dataLength = api.en.works.data.length;
+var select = document.getElementById('select');
+
+for (var i = 0; i < dataLength; i++) {
+    var option = document.createElement("option");
+    option.setAttribute("value", i);
+    option.textContent = api.en.works.data[i].title;
+    select.appendChild(option);
+}
+
+var mod_form = document.querySelector('#mod_work')
+
+var exp_lavorativa = document.querySelector("#exp_lavorativa");
+var exp_lavorativa_descr = document.querySelector("#exp_lavorativa_descr");
+
+
+//da completare
+mod_form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    if (select.value == 'new')
+    {
+
+    } else {
+    api.en.works.data[select.value].title = exp_lavorativa.value;
+    api.en.works.data[select.value].description = exp_lavorativa_descr.value;
+    printWorkExperience(api.en.works);
+}
+
+});
+
+
+
+
+
+
+
+
+
+// var name = nome.nome;
+// var cognome = cognome.cognome;
+
 });  
