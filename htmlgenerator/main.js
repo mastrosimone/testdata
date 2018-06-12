@@ -237,11 +237,6 @@ var mod_form = document.querySelector('#mod_work')
 var exp_lavorativa = document.querySelector("#exp_lavorativa");
 var exp_lavorativa_descr = document.querySelector("#exp_lavorativa_descr");
 
-//test
-
-
-
-
 //da completare
 mod_form.addEventListener("submit", function(e) {
     e.preventDefault();
