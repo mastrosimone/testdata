@@ -183,15 +183,17 @@ function render(locale) {
     }
 }
 
+function change(e){
+    var value = e.target.value;
+    ender(value);
+}
+
 document.addEventListener("DOMContentLoaded", function (event) {
     var lang = document.querySelector('#language-choice');
 
     render(lang.value);
 
-    lang.addEventListener('change', function(e) {
-        var value = e.target.value;
-        render(value);
-    })
+    lang.addEventListener('change', change)
 // inizio modifiche
     // var el = document.querySelector("button");
 
@@ -258,16 +260,5 @@ mod_form.addEventListener("submit", function(e) {
 }
 
 });
-
-
-
-
-
-
-
-
-
-// var name = nome.nome;
-// var cognome = cognome.cognome;
 
 });  

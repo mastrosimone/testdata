@@ -41,6 +41,7 @@
             <div class="l-page-block">
                 <div class="WorkExperience" id="workEl"></div>
             </div>
+
         </div>
     </div>
 </div>
@@ -49,7 +50,7 @@
   
     <form class="modal-content animate" action="/action_page.php">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <span onclick="document.getElementById('id01').style.display='none'" class="close_login" title="Close Modal">&times;</span>
       </div>
   
       <div class="container">
@@ -71,6 +72,50 @@
       </div>
     </form>
   </div>
+
+  <div id="edit" class="modal">
+  
+    <form id="edit_form" class="modal-content animate">
+      <div class="imgcontainer">
+        <span class="close" title="Close Modal">&times;</span>
+      </div>
+  
+      <div class="container">
+        <label for="modifica"><b>Titolo:</b></label>
+        <input type="text" name="modifica" id="modifica">
+        <label for="modifica_descr"><b>Descrizione:</b></label>
+        <input type="text" name="modifica_descr" id="modifica_descr" placeholder="document.works.data[i].description">
+      </div>
+    </form>
+  </div>
+
+   <!-- inserimento form -->
+
+   <div class="l-page">
+    <div class="l-page-container">
+            <div class="l-page-block">
+            <form>
+                Nome:<br>
+                <input type="text" id="nome" name="nome"><br>
+                Cognome:<br>
+                <input type="text" id="cognome" name="cognome"><br>
+                Posizione Lavorativa:<br>
+                <input type="text" id="position" name="position"><br>
+            </form>
+            <form id="mod_work">
+            <select id="select">
+                <option value="new">Aggiungi Voce</option>
+            </select>
+            <br>
+            <input type="text" id="exp_lavorativa" name="exp_lavorativa"><br>
+            <input type="text" id="exp_lavorativa_descr" name="exp_lavorativa_descr"><br>
+            <br>
+            <input id="invia" type="submit" value="Invia"></form>
+            </div>
+    </div>
+</div>
+
+<!-- fine inserimento form -->
 
 </body>
 

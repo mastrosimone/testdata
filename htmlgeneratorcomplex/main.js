@@ -39,7 +39,7 @@ function printMenu(menu) {
     var li = document.createElement("li");
     var login = document.createElement("a");
         login.setAttribute("href", "#");
-        login.setAttribute("onclick", "document.getElementById('id01').style.display='block'");
+        login.setAttribute("onclick", "document.getElementById('edit').style.display='block'");
         login.textContent = "Login";
         li.classList.add("Header-nav-el");
         li.appendChild(login);
@@ -131,6 +131,7 @@ function printPersonalInfos(personal) {
  * @return {undefined}
  */
 
+
 function printWorkExperience(works) {
     var workEl = document.getElementById('workEl');
 
@@ -155,10 +156,16 @@ function printWorkExperience(works) {
     for (var i = 0; i < dataLength; i++) {
         var h4 = document.createElement("h4");
         h4.setAttribute("class", "workexperience");
-        h4.textContent = works.data[i].title;
+        h4.textContent = works.data[i].title; 
+        h4.addEventListener('click', function(){
+            document.getElementById('edit').style.display='block';
+            placeholder();
+        });
+        h4.setAttribute("id", i);
         var p = document.createElement("p");
         p.setAttribute("class", "workexperience");
         p.textContent = works.data[i].description;
+        p.setAttribute("onclick", "document.getElementById('edit').style.display='block'");
 
         div2.appendChild(h4);
         div2.appendChild(p);
@@ -168,6 +175,13 @@ function printWorkExperience(works) {
 
 
 }
+
+function placeholder() {
+    // var dataLength = api.en.works.data.length;
+    document.getElementById("modifica").value = api.en.works.data[0].title;
+    document.getElementById("modifica_descr").value = api.en.works.data[0].description;
+}
+
 
 function blur() {
 
@@ -198,6 +212,7 @@ window.onclick = function(event) {
 // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 // VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
 
+
 function render(locale) {
     if ({}.hasOwnProperty.call(api, locale)) {
         if ({}.hasOwnProperty.call(api[locale], 'menu')) {
@@ -216,13 +231,113 @@ function render(locale) {
     }
 }
 
+function change(e) {
+    var value = e.target.value;
+        render(value);
+};
+
 document.addEventListener("DOMContentLoaded", function (event) {
     var lang = document.querySelector('#language-choice');
 
     render(lang.value);
 
-    lang.addEventListener('change', function(e) {
-        var value = e.target.value;
-        render(value);
-    })
+    lang.addEventListener('change', change)
+
+// inizio modifiche
+    // var el = document.querySelector("button");
+
+// el.addEventListener("click", function(e) {
+//     console.log(e.targer);
+//     console.log(e.type);
+    
+//     e.preventDefault();
+// });
+
+var form = document.querySelector("form");
+
+form.addEventListener("keyup", function(e) {
+    e.preventDefault();
+    api[lang.value].personal.data.surname = cognome.value;
+    api[lang.value].personal.data.firstname = nome.value;
+    api[lang.value].personal.data.position = position.value;
+    printPersonalInfos(api[lang.value].personal);
+});
+
+var nome = document.querySelector("#nome");
+var cognome = document.querySelector("#cognome");
+
+// inizio workexprerience
+
+var dataLength = api.en.works.data.length;
+var select = document.getElementById('select');
+var i = 0;
+
+for (i; i < dataLength; i++) {
+    var option = document.createElement("option");
+    option.setAttribute("value", i);
+    option.textContent = api.en.works.data[i].title;
+    select.appendChild(option);
+}
+
+var mod_form = document.querySelector('#mod_work')
+
+var exp_lavorativa = document.querySelector("#exp_lavorativa");
+var exp_lavorativa_descr = document.querySelector("#exp_lavorativa_descr");
+
+//test modifica con modal unico
+var modifica = document.querySelector("#modifica");
+var modifica_descr = document.querySelector("#modifica_descr");
+var form = document.querySelector('#edit_form');
+var span = document.querySelector('.close');
+
+
+span.addEventListener("click", function(e) {
+    
+    document.getElementById('edit').style.display='none';
+});
+
+
+form.addEventListener("keyup", function(e) {
+    if (e.keyCode == 13) {
+        e.preventDefault();
+        document.getElementById('edit').style.display='none';
+        return false;
+    }
+});
+
+// da definire
+
+
+
+modifica.addEventListener("keyup", function(e) {
+    e.preventDefault();
+    api[lang.value].works.data[0].title = modifica.value;
+    printWorkExperience(api[lang.value].works);
+    
+})
+modifica_descr.addEventListener("keyup", function(e) {
+    e.preventDefault();
+    api[lang.value].works.data[0].description = modifica_descr.value;
+    printWorkExperience(api[lang.value].works);
+    
+}
+
+// mod_form.addEventListener("submit", function(e) {
+//     e.preventDefault();
+//     if (select.value == 'new'){
+//         var element = {}, data = [];
+//         element.title = exp_lavorativa.value;
+//         element.description = exp_lavorativa_descr.value;
+//         data.push(element);
+//         api[lang.value].works.data.push(element);
+//         printWorkExperience(api[lang.value].works);
+
+//     } else {
+//     api[lang.value].works.data[select.value].title = exp_lavorativa.value;
+//     api[lang.value].works.data[select.value].description = exp_lavorativa_descr.value;
+//     printWorkExperience(api[lang.value].works);
+// }}
+
+);
+
 });  
