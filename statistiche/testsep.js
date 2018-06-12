@@ -1,5 +1,11 @@
 // IIFE
 
+
+/* var api = {
+    en: {},
+    it: {}
+}; */
+
 var api = {
     data: [
         {
@@ -85,8 +91,8 @@ var api = {
         }
     ]
 };
-/* 
-var Language = (function() {
+ 
+/* var Language = (function() {
     var currentLanguage = null;
     var languageElement = document.querySelector('#language-choice');
 
@@ -108,19 +114,19 @@ var Api = (function(api, language) {
             return api[language.get()];
         }
     };
-})(api, Language); */
+})(api, Language);  */
 
 
 
-var Platform = (function(a) {
+var Platform = (function(api) {
     var result = [];
-    for(x = 0;x < a.data.length;x++)
+    for(x = 0;x < api.data.length;x++)
     
-    result.push(a.data[x].platform)
+    result.push(api.data[x].platform)
     
     return result
-    
-   {
+   { 
+       
 
     };
 })(api);
@@ -141,9 +147,38 @@ var Editor = (function() {
     };
 })(api, Render);
 
-var App = (function(document, render, editor) {
+var App = (function(doc) {
+    document.addEventListener("DOMContentLoaded", function() {
+
+        var workEl = doc.getElementById('workEl');
+
+        workEl.innerHTML = "";
+
+        var h3 = doc.createElement("h3");
+        h3.textContent = Platform;
+        h3.classList.add("WorkExperience-title");
+        workEl.appendChild(h3);
+
+        var div = doc.createElement("div");
+        div.classList.add("WorkExperience-content");
+        workEl.appendChild(div);
+
+        var div2 = doc.createElement("div");
+        div2.classList.add("WorkExperience-row");
+        div.appendChild(div2);
+
+        return console.log(workEl)
+        {
+        
+        }
+        
+    });
+
+})(document);
+
+/* var App = (function(document, render, editor) {
     document.addEventListener("DOMContentLoaded", function() {
         
     });
 
-})(document, Render, Editor);
+})(document, Render, Editor); */
