@@ -226,59 +226,50 @@ form#playerurl {
     border: 0px;
 }
 
-button#play {
+button.play {
     background-color: #333;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
     width: 300px;
-    border: solid 1px #8a8a8a;
+}
+button.barenable {
+    background-color: #7b7b7b;
+    width: 150px;
+}
+button.download {
+    background-color: #5a5a5a;
+    width: 80px;
 }
 
-button#stop {
+button.pause {
     background-color: tomato;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
     width: 200px;
-    border: solid 1px #8a8a8a;
 }
 
-button#up, button#down {
+button.up, button.down {
     background-color: #a2a2a2;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100px;
-    border: solid 1px #8a8a8a;
+    width: 80px;
+}
+button.up_ko, button.down_ko {
+    background-color: #a2a2a2;
+    width: 80px;
+    opacity: 0.3!important;
 }
 
-button#ok {
+button.ok {
     background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
+    width: 150px;
+}
+button.coda {
+    background-color: #6a758e;
     width: 300px;
-    border: solid 1px #8a8a8a;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 300px;
-    border: solid 1px #8a8a8a;
+button.shuffle {
+    background-color: #4c75af;
+    width: 150px;
+}
+button.next, button.previous {
+    background-color: #97bf68;
+    width: 150px;
 }
 
 button:hover {
