@@ -119,17 +119,69 @@ var Api = (function(api, language) {
 
 
 var Platform = (function(api) {
-    var result = [];
-    for(x = 0;x < api.data.length;x++)
     
-    result.push(api.data[x].platform)
+    function getAllPlatforms() {
     
-    return result
-   { 
-       
-
+        var result = []
+    
+        for(x = 0;x < api.data.length;x++)
+        {
+            result.push(api.data[x].platform)
+        }
+        return result
+    }
+    
+    return { 
+       getAll: getAllPlatforms
     };
 })(api);
+
+console.log(Platform.getAll());
+
+
+
+var Impressions = (function(api) {
+    
+    function getTotalImpressions() {
+    
+        var result = 0
+    
+        for(x = 0;x < api.data.length;x++){
+        result += api.data[x].impressions
+        }
+        return result
+    }
+    
+    return { 
+       getAll: getTotalImpressions
+    };
+})(api);
+
+console.log(Impressions.getAll());
+
+
+
+var Clicks = (function(api) {
+    
+    function getTotalClicks(){
+    
+    var result = 0;
+    
+        for(x = 0;x < api.data.length;x++){
+        result += api.data[x].clicks
+        }
+        return result
+    }
+    
+    return { 
+       getAll: getTotalClicks
+    };
+})(api);
+
+console.log(Clicks.getAll());
+
+
+
 
 var Render = (function() {
     // stampa sul dom
