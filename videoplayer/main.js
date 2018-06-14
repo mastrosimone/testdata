@@ -153,14 +153,13 @@ var Player = (function(api) {
     }
     function Next() {
         var result = []
-        for(x = 0;x < api.data.length;x++
-        )
+        for(x = 0;x < api.data.length;x++)
         
         result.push( api.data[x].sources)
         var item = result[Math.floor(Math.random()*api.data.length)]
         var source = document.getElementById('source')
+        pre = source.src;
         source.setAttribute('src', item)
-        pre = item
         video.load();
 
     }
@@ -170,7 +169,7 @@ var Player = (function(api) {
         console.log(pre)
         video.load();
         
-            }
+    }
     function Coda() {
  /*       console.log(api.videos)
         var result = []
@@ -193,10 +192,12 @@ var Player = (function(api) {
         for(x = 0;x < api.data.length;x++
         )
         
-        result.push( api.data[x].sources)
+        result.push(api.data[x].sources)
         var item = result[Math.floor(Math.random()*api.data.length)]
         var source = document.getElementById('source')
+        var random = document.getElementById('shuffle')
         source.setAttribute('src', item)
+        random.textContent = "Random"
         pre = item //dichiara la variabile esterna per il pulsante previous
         video.load();
 
