@@ -2,52 +2,41 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>Video</title>
+    <title>Video Player</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link href="style.css" rel="stylesheet" type="text/css">
-    
-
-    <meta name="viewport" content="width=device-width">
+     <meta name="viewport" content="width=device-width">
 </head>
 
 <body>
     <header class="Header">
     </header>
 
-    <div class="l-page">
-        <div class="l-page-container">
-            <div class="l-page-block"></div>
-
-            <div class="l-page">
-                <div class="l-page-container"></div>
-            </div>
-
-        <div class="l-page-block">
-            <video id="video" autoplay="true" preload="auto" width="100%">
+    <div class="index">
+            <div id="video_title"></div>
+            <video id="video" preload="auto" width="100%" controlsList="nodownload">
                 <source id="source" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> element.
                  </video>
-            </div>
                 <div id="button_div" class="button_div">
+                <button id="devbutton" class="devbutton">Dev</button>
                 <button id="shuffle" class="shuffle">Shuffle Play</button>
                 <button id="previous" class="previous">Previous</button>
-                <button id="play" class="play"><i class="fa fa-play"></i></button>
+                <button id="play" class="play"><i id="playicon" class="fa fa-play"></i></button>
                 <button id="next" class="next">Next</button>
-                <button id="pause" class="pause"><i class="fa fa-pause"></i></button>
                 <button id="barenable" class="barenable">Control Disable</button>
-                <button id="download" class="download"><i class="fa fa-download"></i></button><br>
-                <button id="up" class="up"><i class="fa fa-volume-up"></i></button><br>
+                <button id="download" class="download"><i class="fa fa-download"></i></button>
+                <button id="up" class="up"><i class="fa fa-volume-up"></i></button>
                 <button id="down" class="down"><i class="fa fa-volume-down"></i></button><br>
                 <form id="playerurl">
                 <input id="url" type="text" name="text" placeholder="Put in your url">
                 <button type="button" id="apri" class="apri">Apri url</button>
                 <button type="button" id="coda" class="coda">Metti in coda</button>
                 </form>
-            </div>
         </div>
-    </div>
+        <div id="video_thumb_div"><img id='video_thumb' src=''></img></div>
+        <div id="video_subtitle"></div>
+        <div id="video_description"></div>
     <script src="main.js"></script>
 </body>
 

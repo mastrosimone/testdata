@@ -1,207 +1,6 @@
 body {
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.l-page{
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: black;
-}
-
-.l-page-container {
-    margin: 0 auto;
-}
-
-.l-page-block{
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 25px;
-}
-
-.l-page-block--noTopGutter {
-    padding-top: 0;
-}
-
-@media (min-width: 768px){
-    .l-page-block{
-        padding-left: 60px;
-        padding-right: 60px
-    }
-}
-
-@media (min-width: 1240px){
-    .l-page-block{
-        padding-left: 90px;
-        padding-right: 90px
-    }
-}
-
-/**
- *  Header
- */
-
-.Header {
-    background-color: #5d5d5d;
-}
-
-.Header a {
-    color: white;
-}
-
-.Header-container {
-    margin: 0 auto;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.Header ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.Header-nav {
-
-}
-
-.Header-nav-el {
-    padding: 5px 5px 5px 0;
-}
-
-.Header-language {
-    padding-top: 6px;
-}
-
-a {
-    background-color: transparent;
-    text-decoration: none;
-}
-
-@media (min-width: 768px){
-    .Header-nav {
-        width: calc(100% - 100px);
-    }
-
-    .Header-language {
-        width: 100px;
-        text-align: right;
-    }
-
-    .Header-nav-el {
-        padding: 5px 15px;
-    }
-
-    .Header-nav-el:hover {
-        background-color: #f00;
-    }
-
-    .Header-container {
-        flex-direction: row;
-    }
-
-    .Header ul {
-        flex-direction: row;
-    }
-}
-
-.PersonalInfos {
-    display: flex;
-}
-
-.PersonalInfos-skills {
-    font-size: 12px;
-    color: #CCC;
-    display: flex;
-    flex-direction: row;
-}
-
-.PersonalInfos-skills li {
-    padding-left: 5px;
-}
-
-.PersonalInfos img {
-    width: 100%;
-}
-
-.PersonalInfos-image {
-    width: 200px;
-}
-
-@media (min-width: 768px){
-    .PersonalInfos-image {
-        width: 200px;
-    }
-}
-
-.PersonalInfos-content {
-    flex: 1 1 0;
-    margin-left: 15px;
-    padding-left: 20px;
-    background-color: #f7f7f7;
-    border-radius: 10px 35px;
-}
-
-/* inizio aggiunzioni */
-
-
-h4.workexperience {
-    font-size: 1.2em;
-    background: -webkit-linear-gradient(left, #768ec3  , white); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #768ec3 , white); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #768ec3 , white); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #768ec3  , white); /* Standard syntax (must be last) */
-    padding: 15px;
-    margin: 0px;
-    color: #fff;
-}
-
-p.workexperience {
-    padding: 15px;
-    border-top: solid 1px #a7a7a7;
-    margin: 0px;
-}
-
-li.skill {
-    background-color: #333;
-    margin: 3px;
-    padding: 5px 10px;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-div.rainbow {
-    background: -webkit-linear-gradient(left, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 255, 0), rgb(0, 255, 0), rgb(0, 255, 255), rgb(0, 0, 255), rgb(255, 0, 255)); /* Standard syntax (must be last) */
-    height: 5px;
-    width: 100%;
-}
-
-h3.WorkExperience-title {
-    padding: 15px;
-    color: #fff;
-    background-color: #4a6e8c;
-}
-
-img#profile_photo{
-    border-radius: 35px 10px;
-}
-
-img#profile_photo:hover{
-    filter: grayscale(100%);
-    transition: 0.5s;
-}
-
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
 
 #url {
     width: 100%;
@@ -226,28 +25,50 @@ form#playerurl {
     border: 0px;
 }
 
+video#video {
+    position:relative;
+    z-index:0;
+  }
+  
+#video_title {
+    position: relative;
+    color: #d6d6d6;
+    text-shadow: 1px 1px #616161;
+    text-align: center;
+    z-index: 5;
+    top: 40px;
+    background-color: #35353587;  
+}
+
 button.play {
     background-color: #333;
     width: 300px;
 }
-button.barenable {
-    background-color: #7b7b7b;
-    width: 150px;
-}
-button.download {
-    background-color: #5a5a5a;
-    width: 80px;
+
+button.devbutton {
+    background-color: tomato;
+    width: 100px;
 }
 
 button.pause {
     background-color: tomato;
-    width: 200px;
+}
+
+button.barenable {
+    background-color: #7b7b7b;
+    width: 150px;
+}
+
+button.download {
+    background-color: #5a5a5a;
+    width: 80px;
 }
 
 button.up, button.down {
     background-color: #a2a2a2;
     width: 80px;
 }
+
 button.up_ko, button.down_ko {
     background-color: #a2a2a2;
     width: 80px;
@@ -268,63 +89,10 @@ button.shuffle {
     width: 150px;
 }
 button.next, button.previous {
-    background-color: #97bf68;
+    background-color: #42a287;
     width: 150px;
 }
 
-button:hover {
-    opacity: 0.8;
-}
-
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-
-/* aggiunzioni modal login*/
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
 button {
     background-color: #4CAF50;
     color: white;
@@ -337,103 +105,4 @@ button {
 
 button:hover {
     opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 400px; /* Could be more or less, depending on screen size */
-}
-@media screen and (max-width: 400px) {
-    .modal-content {
-        width: 90%;
-    }
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
 }
