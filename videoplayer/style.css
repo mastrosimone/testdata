@@ -154,3 +154,20 @@ span.close_list:focus {
     cursor: pointer;
     margin-right: 30px;
 }
+div#create_list_1, div#create_list_2, div#create_list_3 {
+    float: left;
+    width: 33%;
+    max-height: 100%;
+}
+img.img_preview_list9 {
+    width: 250px;
+}
+div.div_list_gen {
+    text-align: center;
+}
+div.create_list {
+    margin-top: 20px;
+}
+.div_list_title {
+    color: #dedede;
+}

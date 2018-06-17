@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta charset="utf-8">
     <title>Video Player</title>
@@ -13,10 +13,15 @@
     </header>
 
     <div class="index">
-        <div class="filelist" id="filelist" style="display: none;">text content!<span id="close_list" class="close_list">&times;</span></div>
+        <div class="filelist" id="filelist" style="display: none;"><span id="close_list" class="close_list">&times;</span>
+            <div id="create_list" class="create_list">
+                <div id="create_list_1" class="create_list_1"></div>
+                <div id="create_list_2" class="create_list_2"></div>
+                <div id="create_list_3" class="create_list_3"></div>
+            </div></div>
             <div id="video_title"></div>
             <video id="video" preload="auto" width="100%" controlsList="nodownload" onloadstart="this.volume=0.0">
-                <source id="source" href="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                <source id="source" href="video/SampleVideo_1280x720_30mb.mp4" src="video/SampleVideo_1280x720_30mb.mp4" type="video/mp4">
                         Your browser does not support the <code>video</code> element.
                  </video>
                 <div id="button_div" class="button_div">

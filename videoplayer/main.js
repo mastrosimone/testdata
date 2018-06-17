@@ -1,10 +1,105 @@
 var api = { data:
                 [ 
+                    /* { "description" : "0 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 0"
+                    },
+                    { "description" : "1 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 1"
+                    },
+                    { "description" : "2 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 2"
+                    },
+                    { "description" : "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 3"
+                    },{ "description" : "0 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 4"
+                    },
+                    { "description" : "1 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 5"
+                    },
+                    { "description" : "2 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 6"
+                    },
+                    { "description" : "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 7"
+                    },{ "description" : "0 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 0"
+                    },
+                    { "description" : "1 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 8"
+                    },
+                    { "description" : "2 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 9"
+                    },
+                    { "description" : "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 10"
+                    },
+                    { "description" : "0 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 11"
+                    },
+                    { "description" : "1 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 12"
+                    },
+                    { "description" : "2 Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 13"
+                    },
+                    { "description" : "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
+                    "sources" : "video/SampleVideo_1280x720_30mb.mp4",
+                    "subtitle" : "By Blender Foundation",
+                    "thumb" : "images/00000001.jpg",
+                    "title" : "Big Buck Bunny 14"
+                    }, */
                     { "description" : "Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps... and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.\n\nLicensed under the Creative Commons Attribution license\nhttp://www.bigbuckbunny.org",
                     "sources" : "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
                     "subtitle" : "By Blender Foundation",
                     "thumb" : "images/00000001.jpg",
-                    "title" : "Big Buck Bunny"
+                    "title" : "Big Buck Bunny",
+                    "tag" : ["tag 1", "tag 2", "tag 3"]
                     },
                     { "description" : "The first Blender Open Movie from 2006",
                     "sources" : "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
@@ -112,6 +207,22 @@ var Player = (function(api) {
         return video.pause(), PlayBottonTransform(), ViewData()
         }
     }
+
+    function SelectionPlay() {
+        presrc = source.src
+        if (devmode == true){
+            console.log('Playstatus: ', playstatus)
+            console.log('Previous: ', presrc)
+        }
+        if (playstatus == false){
+            playstatus = true
+        return video.play(), PlayBottonTransform(), ViewData()
+        }
+        if (playstatus == true){
+            playstatus = false
+        return video.pause(), PlayBottonTransform(), ViewData()
+        }
+    }
     
     function PlayBottonTransform() {
         
@@ -183,9 +294,6 @@ var Player = (function(api) {
     }
 
     function Random() {
-        for(x = 0;x < api.data.length;x++){
-
-        }
 
         current = Math.floor(Math.random()*api.data.length)
         if (devmode == true){
@@ -214,6 +322,7 @@ var Player = (function(api) {
         if (filelist.style.display == "none") {
             filelist.style.display = "block"
         }
+        return List9() 
     } 
 
     function ListClose() {
@@ -221,6 +330,114 @@ var Player = (function(api) {
         var fileclose = document.getElementById('filelist');
         fileclose.style.display = "none"
     } 
+
+    function List() {
+        
+        var filelist = document.getElementById('create_list')
+        for(x = 0;x < api.data.length;x++){
+            var divgen = document.createElement("div")
+            divgen.setAttribute('class', 'div_list_gen')
+            divgen.setAttribute('id', x)
+            filelist.appendChild(divgen)
+            
+            var divimg = document.createElement("div")
+            divimg.setAttribute('class', 'div_list_img')
+            divgen.appendChild(divimg)
+
+            var img = document.createElement('img')
+            img.setAttribute('src', api.data[x].thumb)
+            divimg.appendChild(img)
+
+            var divtitle = document.createElement("div")
+            divtitle.setAttribute('class', 'div_list_title')
+            var title = api.data[x].title
+            divtitle.textContent = title
+            divgen.appendChild(divtitle)
+        }
+    }
+
+    function List9() {
+/*        da finire per selezionare la lista in maniera casuale
+        var random = []
+        for(x = 0;x < 8;x++) {
+        random[x] = Math.floor(Math.random()*api.data.length)
+        randomris = ('random' + x)
+            console.log(randomris)
+        console.log(random[x])
+        } */
+
+        for(x = 0;x < api.data.length;x++){
+            if (x >= 0 & x < 3) {
+                var filelist = document.getElementById('create_list_1')
+                var divgen = document.createElement("div")
+                divgen.setAttribute('class', 'div_list_gen')
+                divgen.setAttribute('id', x)
+                filelist.appendChild(divgen)
+                
+                var divimg = document.createElement("div")
+                divimg.setAttribute('class', 'div_list_img')
+                divgen.appendChild(divimg)
+
+                var img = document.createElement('img')
+                img.setAttribute('class', 'img_preview_list9')
+                img.setAttribute('src', api.data[x].thumb)
+                divimg.appendChild(img)
+
+                var divtitle = document.createElement("div")
+                divtitle.setAttribute('class', 'div_list_title')
+                var title = api.data[x].title
+                divtitle.textContent = title
+                divgen.appendChild(divtitle)
+            }
+            if (x >= 3 & x <= 5) {
+                var filelist = document.getElementById('create_list_2')
+                var divgen = document.createElement("div")
+                divgen.setAttribute('class', 'div_list_gen')
+                divgen.setAttribute('id', x)
+                filelist.appendChild(divgen)
+                
+                var divimg = document.createElement("div")
+                divimg.setAttribute('class', 'div_list_img')
+                divgen.appendChild(divimg)
+
+                var img = document.createElement('img')
+                img.setAttribute('class', 'img_preview_list9')
+                img.setAttribute('src', api.data[x].thumb)
+                divimg.appendChild(img)
+
+                var divtitle = document.createElement("div")
+                divtitle.setAttribute('class', 'div_list_title')
+                var title = api.data[x].title
+                divtitle.textContent = title
+                divgen.appendChild(divtitle)
+            }
+            if (x >= 6 & x <= 8) {
+                var filelist = document.getElementById('create_list_3')
+                var divgen = document.createElement("div")
+                divgen.setAttribute('class', 'div_list_gen')
+                divgen.setAttribute('id', x)
+                filelist.appendChild(divgen)
+                
+                var divimg = document.createElement("div")
+                divimg.setAttribute('class', 'div_list_img')
+                divgen.appendChild(divimg)
+
+                var img = document.createElement('img')
+                img.setAttribute('class', 'img_preview_list9')
+                img.setAttribute('src', api.data[x].thumb)
+                divimg.appendChild(img)
+
+                var divtitle = document.createElement("div")
+                divtitle.setAttribute('class', 'div_list_title')
+                var title = api.data[x].title
+                divtitle.textContent = title
+                divgen.appendChild(divtitle)
+            }
+            if (x >= 9) {
+                return
+            }
+        }
+    }
 
     function Up() {
         if (devmode == true){
@@ -352,4 +569,7 @@ var App = (function(Player) {
     ListButton.addEventListener('click', Player.getListOpen)
     var ListClose = document.querySelector('#close_list')
     ListClose.addEventListener('click', Player.getListClose)
+    var ListCreate = document.querySelector('#create_list')
+    ListCreate.addEventListener('click', Player.getList)
+    
 })(Player);
