@@ -79,14 +79,19 @@ button.ok {
     background-color: #4CAF50;
     width: 150px;
 }
-button.coda {
+button.queue {
     background-color: #6a758e;
     width: 300px;
 }
 
+button.list {
+    background-color: #6a758e;
+    width: 100px;
+}
+
 button.shuffle {
     background-color: #4c75af;
-    width: 150px;
+    width: 120px;
 }
 button.next, button.previous {
     background-color: #42a287;
@@ -105,4 +110,47 @@ button {
 
 button:hover {
     opacity: 0.8;
+}
+div#video_thumb_div {
+    float: left;
+}
+div#video_title2 {
+    float: left;
+    width: 70%;
+    padding: 20px 30px 10px;
+    font-size: 24px;
+}
+div#video_subtitle {
+    float: left;
+    width: 70%;
+    padding: 0px 30px 10px;
+}
+div#video_description {
+    float: left;
+    width: 70%;
+    padding: 10px 30px;
+}
+div#filelist {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    display: none;
+    position: fixed;
+    z-index: 10;
+    background-color: #333333b8;
+}
+span.close_list {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+span.close_list:hover,
+span.close_list:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 30px;
 }
