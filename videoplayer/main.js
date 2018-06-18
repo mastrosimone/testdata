@@ -182,6 +182,7 @@ var playstatus = false
 var next = false
 var devmode = false
 var current = 0
+var selection = ''
 
 for(x = 0;x < api.data.length;x++)
 
@@ -365,14 +366,20 @@ var Player = (function(api) {
             console.log(randomris)
         console.log(random[x])
         } */
+        var filelist1 = document.getElementById('create_list_1')
+        var filelist2 = document.getElementById('create_list_2')
+        var filelist3 = document.getElementById('create_list_3')
+        filelist1.innerHTML = ''
+        filelist2.innerHTML = ''
+        filelist3.innerHTML = ''
 
-        for(x = 0;x < api.data.length;x++){
+        for(x = 0;x < api.data.length;x++)
+        {
             if (x >= 0 & x < 3) {
-                var filelist = document.getElementById('create_list_1')
                 var divgen = document.createElement("div")
                 divgen.setAttribute('class', 'div_list_gen')
                 divgen.setAttribute('id', x)
-                filelist.appendChild(divgen)
+                filelist1.appendChild(divgen)
                 
                 var divimg = document.createElement("div")
                 divimg.setAttribute('class', 'div_list_img')
@@ -380,8 +387,17 @@ var Player = (function(api) {
 
                 var img = document.createElement('img')
                 img.setAttribute('class', 'img_preview_list9')
+                img.setAttribute('href', api.data[x].sources)
                 img.setAttribute('src', api.data[x].thumb)
                 divimg.appendChild(img)
+
+                img.addEventListener('click', function(e){
+                    console.log(e.target.getAttribute('href'))
+
+                    var source = document.getElementById('source')
+                    source.setAttribute('src', e.target.getAttribute('href'))
+                    video.load(), video.play(), ListClose()
+                })
 
                 var divtitle = document.createElement("div")
                 divtitle.setAttribute('class', 'div_list_title')
@@ -390,11 +406,10 @@ var Player = (function(api) {
                 divgen.appendChild(divtitle)
             }
             if (x >= 3 & x <= 5) {
-                var filelist = document.getElementById('create_list_2')
                 var divgen = document.createElement("div")
                 divgen.setAttribute('class', 'div_list_gen')
                 divgen.setAttribute('id', x)
-                filelist.appendChild(divgen)
+                filelist2.appendChild(divgen)
                 
                 var divimg = document.createElement("div")
                 divimg.setAttribute('class', 'div_list_img')
@@ -402,8 +417,17 @@ var Player = (function(api) {
 
                 var img = document.createElement('img')
                 img.setAttribute('class', 'img_preview_list9')
+                img.setAttribute('href', api.data[x].sources)
                 img.setAttribute('src', api.data[x].thumb)
                 divimg.appendChild(img)
+
+                img.addEventListener('click', function(e){
+                    console.log(e.target.getAttribute('href'))
+
+                    var source = document.getElementById('source')
+                    source.setAttribute('src', e.target.getAttribute('href'))
+                    video.load(), video.play(), ListClose()
+                })
 
                 var divtitle = document.createElement("div")
                 divtitle.setAttribute('class', 'div_list_title')
@@ -412,11 +436,10 @@ var Player = (function(api) {
                 divgen.appendChild(divtitle)
             }
             if (x >= 6 & x <= 8) {
-                var filelist = document.getElementById('create_list_3')
                 var divgen = document.createElement("div")
                 divgen.setAttribute('class', 'div_list_gen')
                 divgen.setAttribute('id', x)
-                filelist.appendChild(divgen)
+                filelist3.appendChild(divgen)
                 
                 var divimg = document.createElement("div")
                 divimg.setAttribute('class', 'div_list_img')
@@ -424,8 +447,17 @@ var Player = (function(api) {
 
                 var img = document.createElement('img')
                 img.setAttribute('class', 'img_preview_list9')
+                img.setAttribute('href', api.data[x].sources)
                 img.setAttribute('src', api.data[x].thumb)
                 divimg.appendChild(img)
+
+                img.addEventListener('click', function(e){
+                    console.log(e.target.getAttribute('href'))
+
+                    var source = document.getElementById('source')
+                    source.setAttribute('src', e.target.getAttribute('href'))
+                    video.load(), video.play(), ListClose()
+                })
 
                 var divtitle = document.createElement("div")
                 divtitle.setAttribute('class', 'div_list_title')
