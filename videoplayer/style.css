@@ -31,13 +31,18 @@ video#video {
   }
   
 #video_title {
-    position: relative;
+    position: fixed;
     color: #d6d6d6;
+    display: none;
     text-shadow: 1px 1px #616161;
     text-align: center;
     z-index: 5;
-    top: 40px;
-    background-color: #35353587;  
+    height: 45px;
+    font-size: 25px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: #35353587;
 }
 
 button.play {
@@ -171,3 +176,25 @@ div.create_list {
 .div_list_title {
     color: #dedede;
 }
+#seekbar
+{  
+    cursor: pointer;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #0075ff29;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+#seekbar span
+{
+    background-color: #ffa500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10px;
+    width: 0px;
+    }
+
+/* following rule is for hiding Stack Overflow's console  */
+.as-console-wrapper{ display: none !important;}
