@@ -14,7 +14,7 @@ var Player = (function(api) {
     var url = document.querySelector("#url")
 
     function FirstAction() {
-        return Random(), Play()
+        return Random()
 
     }
 
@@ -28,6 +28,7 @@ var Player = (function(api) {
         if (devmode == true){
             console.log('Playstatus: ', playstatus)
             console.log('Previous: ', presrc)
+            console.log('Current: ', current)
         }
         if (playstatus == false){
             playstatus = true
@@ -83,7 +84,7 @@ var Player = (function(api) {
             buttonplay.classList.replace('play', 'pause')
             playicon.setAttribute('class', 'fa fa-pause')
         }
-        if (playstatus == true & buttonplay == 'pause'){
+        if (playstatus == true && buttonplay == 'pause'){
             buttonplay.classList.replace('pause', 'play')
             playicon.setAttribute('class', 'fa fa-play')
         }
@@ -241,7 +242,7 @@ var Player = (function(api) {
 
                     var source = document.getElementById('source')
                     source.setAttribute('src', e.target.getAttribute('href'))
-                    video.load(), video.play(), ListClose()
+                    video.load(), video.play(), ListClose(), ViewData()
                 })
 
                 var divtitle = document.createElement("div")
@@ -271,7 +272,7 @@ var Player = (function(api) {
 
                     var source = document.getElementById('source')
                     source.setAttribute('src', e.target.getAttribute('href'))
-                    video.load(), video.play(), ListClose()
+                    video.load(), video.play(), ListClose(), ViewData()
                 })
 
                 var divtitle = document.createElement("div")
@@ -299,7 +300,7 @@ var Player = (function(api) {
                 img.addEventListener('click', function(e){
                     var source = document.getElementById('source')
                     source.setAttribute('src', e.target.getAttribute('href'))
-                    video.load(), video.play(), ListClose()
+                    video.load(), video.play(), ListClose(), ViewData()
                 })
 
                 var divtitle = document.createElement("div")
@@ -313,6 +314,8 @@ var Player = (function(api) {
             }
         }
     }
+
+        //seekbar
 
         var vid = document.getElementById("video");
         vid.ontimeupdate = function(){
@@ -397,11 +400,11 @@ var Player = (function(api) {
             current = current + 1
             next = true
             }
-            return video.load(), video.play(), PlayBottonTransform(), ViewData()
+            return video.load(), ViewData(), Play(), PlayBottonTransform()
         }
         if (shuffleplay == true) {
             next = true
-            return video.load(), Random(), video.play(), PlayBottonTransform(), ViewData()
+            return video.load(), ViewData() , Random(), Play(), PlayBottonTransform()
         }
 
     }
