@@ -8,16 +8,19 @@ var selection = ''
 
 for(x = 0;x < api.data.length;x++)
 
-
 var Player = (function(api) {
 
     var video = document.querySelector("#video")
     var url = document.querySelector("#url")
 
+    function FirstAction() {
+        return Random(), Play()
+
+    }
 
     //list at ending video
     video.onended = function() {
-            ListOpen()
+        ListOpen()
     };
 
     function Play() {
@@ -324,7 +327,7 @@ var Player = (function(api) {
             var percentage = ( left / totalWidth );
             var vidTime = vid.duration * percentage;
             vid.currentTime = vidTime;
-        });//click()
+        });
 
 
     function Up() {
@@ -405,7 +408,7 @@ var Player = (function(api) {
     
     function Previous() {
         source.setAttribute('src', presrc)
-        return video.load(), Play()
+        return video.load(), video.play()
         
     }
 
@@ -426,7 +429,8 @@ var Player = (function(api) {
        getShuffle: Shuffle, getNext: Next, getPrevious: Previous,
        getRandom: Random, getListOpen: ListOpen,
        getPlayBottonTransform: PlayBottonTransform, getViewData: ViewData,
-       getDevMode: DevMode, getListClose: ListClose, getVideoIn: VideoIn, getVideoOut: VideoOut
+       getDevMode: DevMode, getListClose: ListClose, getVideoIn: VideoIn,
+       getVideoOut: VideoOut, getFirstAction: FirstAction
     };
 
 

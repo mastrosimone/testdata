@@ -181,14 +181,14 @@ div.create_list {
     cursor: pointer;
     height: 5px;
     margin-bottom: 5px;
-    background-color: #0075ff29;
+    background-color: #17171729;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
 #seekbar span
 {
-    background-color: #ffa500;
+    background-color: #ff2f00;
     position: absolute;
     top: 0;
     left: 0;

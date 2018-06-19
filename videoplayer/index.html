@@ -10,7 +10,7 @@
      <meta name="viewport" content="width=device-width">
 </head>
 
-<body onLoad="Player.getPlay()">
+<body onload="Player.getFirstAction()">
     <header class="Header">
     </header>
 
@@ -23,7 +23,7 @@
             </div></div>
             <div id="video_title" class="videotitle"></div>
             <video onmouseenter="Player.getVideoIn()" onmouseleave="Player.getVideoOut()" id="video" preload="auto" width="100%" controlsList="nodownload" onloadstart="this.volume=0.0">
-                <source id="source" href="video/SampleVideo_1280x720_30mb.mp4" src="video/SampleVideo_1280x720_30mb.mp4" type="video/mp4">
+                <source id="source" type="video/mp4" src="video/SampleVideo_1280x720_30mb.mp4">
                         Your browser does not support the <code>video</code> element.
                  </video>
                 <div id="button_div" class="button_div">
