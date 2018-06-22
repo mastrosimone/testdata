@@ -2,9 +2,11 @@ var presrc = [] //dichiara la variabile esterna per il pulsante previous
 var shuffleplay = false
 var playstatus = false
 var next = false
-var devmode = false
+var devmode = true
 var current = 0
 var selection = ''
+var deviftrue = 'if (devmode == true) { console.log(document) }'
+var deviffalse = 'if (devmode == false) { console.log(code) }'
 
 for(x = 0;x < api.data.length;x++)
 
@@ -14,30 +16,87 @@ var Player = (function(api) {
     var url = document.querySelector("#url")
 
     function FirstAction() {
-        return Random()
+        video.onended = function() { //list at ending video
+            ListOpen()
+        };
+        if (current == 0){
+            return List9()
+        }
+        return Random(), Play()
 
     }
-
-    //list at ending video
-    video.onended = function() {
-        ListOpen()
-    };
 
     function Play() {
         presrc = source.src
         if (devmode == true){
             console.log('Playstatus: ', playstatus)
             console.log('Previous: ', presrc)
-            console.log('Current: ', current)
+            console.log('Current Array ID:', current)
         }
         if (playstatus == false){
+            if (devmode == true) {
+                console.log('Playstatus: Preaction', playstatus)
+            }
             playstatus = true
-        return video.play(), PlayBottonTransform(), ViewData()
+            return video.load(), video.play(), PlayBottonTransform(), ViewData()
         }
         if (playstatus == true){
             playstatus = false
-        return video.pause(), PlayBottonTransform(), ViewData()
+            return video.pause(), PlayBottonTransform()
         }
+    }
+
+    function PlayBottonTransform() {
+        
+        var buttonplay = document.getElementById('play')
+        var playicon = document.getElementById('playicon')
+        
+        if (playstatus == true){
+            buttonplay.classList.replace('play', 'pause')
+            playicon.setAttribute('class', 'fa fa-pause')
+        }
+        if (playstatus == false){
+            buttonplay.classList.replace('pause', 'play')
+            playicon.setAttribute('class', 'fa fa-play')
+        }
+    }
+
+    function Next() {
+        playstatus = false
+        if (devmode == true){
+            console.log('Next: ', next)
+            }
+        if (shuffleplay == false) {
+            if (current == x) {
+                current = 0
+                next = true
+            } else {
+            current = current + 1
+            next = true
+            }
+            return video.load(), Play()
+        }
+        if (shuffleplay == true) {
+            next = true
+            return video.load(), Random(), Play()
+        }
+
+    }
+    
+    function Previous() {
+        source.setAttribute('src', presrc)
+        return video.load(), video.play()
+    }
+
+    function Queue() {
+        //da definire
+    }
+
+    function Download() {
+        //da definire
+        if (devmode == true){
+            console.log()
+            }
     }
 
     function VideoIn() {
@@ -72,25 +131,6 @@ var Player = (function(api) {
         if (playstatus == true){
             playstatus = false
         return video.pause(), PlayBottonTransform(), ViewData()
-        }
-    }
-    
-    function PlayBottonTransform() {
-        
-        var buttonplay = document.getElementById('play')
-        var playicon = document.getElementById('playicon')
-        
-        if (playstatus == true){
-            buttonplay.classList.replace('play', 'pause')
-            playicon.setAttribute('class', 'fa fa-pause')
-        }
-        if (playstatus == true && buttonplay == 'pause'){
-            buttonplay.classList.replace('pause', 'play')
-            playicon.setAttribute('class', 'fa fa-play')
-        }
-        if (playstatus == false){
-            buttonplay.classList.replace('pause', 'play')
-            playicon.setAttribute('class', 'fa fa-play')
         }
     }
 
@@ -242,7 +282,7 @@ var Player = (function(api) {
 
                     var source = document.getElementById('source')
                     source.setAttribute('src', e.target.getAttribute('href'))
-                    video.load(), video.play(), ListClose(), ViewData()
+                    video.load(), video.play(), ListClose()
                 })
 
                 var divtitle = document.createElement("div")
@@ -272,7 +312,7 @@ var Player = (function(api) {
 
                     var source = document.getElementById('source')
                     source.setAttribute('src', e.target.getAttribute('href'))
-                    video.load(), video.play(), ListClose(), ViewData()
+                    video.load(), video.play(), ListClose()
                 })
 
                 var divtitle = document.createElement("div")
@@ -300,7 +340,7 @@ var Player = (function(api) {
                 img.addEventListener('click', function(e){
                     var source = document.getElementById('source')
                     source.setAttribute('src', e.target.getAttribute('href'))
-                    video.load(), video.play(), ListClose(), ViewData()
+                    video.load(), video.play(), ListClose()
                 })
 
                 var divtitle = document.createElement("div")
@@ -314,8 +354,6 @@ var Player = (function(api) {
             }
         }
     }
-
-        //seekbar
 
         var vid = document.getElementById("video");
         vid.ontimeupdate = function(){
@@ -387,43 +425,6 @@ var Player = (function(api) {
         console.log(source.src)
         a.click()
 
-    }
-    function Next() {
-        if (devmode == true){
-            console.log('Next: ', next)
-            }
-        if (shuffleplay == false) {
-            if (current == x) {
-                current = 0
-                next = true
-            } else {
-            current = current + 1
-            next = true
-            }
-            return video.load(), ViewData(), Play(), PlayBottonTransform()
-        }
-        if (shuffleplay == true) {
-            next = true
-            return video.load(), ViewData() , Random(), Play(), PlayBottonTransform()
-        }
-
-    }
-    
-    function Previous() {
-        source.setAttribute('src', presrc)
-        return video.load(), video.play()
-        
-    }
-
-    function Queue() {
-        //da definire
-    }
-
-    function Download() {
-        //da definire
-        if (devmode == true){
-            console.log()
-            }
     }
 
     return { 
